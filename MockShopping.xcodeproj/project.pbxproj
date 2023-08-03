@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B1A097BF2A7BAE5A00EE1068 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A097BE2A7BAE5A00EE1068 /* APIError.swift */; };
+		B1A097C12A7BAE6800EE1068 /* FetchState.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A097C02A7BAE6800EE1068 /* FetchState.swift */; };
+		B1A097C32A7BAE7A00EE1068 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A097C22A7BAE7A00EE1068 /* APIService.swift */; };
+		B1A097C52A7BAEBA00EE1068 /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A097C42A7BAEBA00EE1068 /* APIConstants.swift */; };
+		B1A097C82A7BB53C00EE1068 /* ProductServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A097C72A7BB53C00EE1068 /* ProductServiceProtocol.swift */; };
+		B1A097CA2A7BBF3D00EE1068 /* URLSessions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A097C92A7BBF3D00EE1068 /* URLSessions.swift */; };
+		B1A097CC2A7BC20900EE1068 /* ProductsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A097CB2A7BC20900EE1068 /* ProductsViewModel.swift */; };
 		B1A3B69D2A7A988E00870525 /* MockShoppingApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A3B69C2A7A988E00870525 /* MockShoppingApp.swift */; };
 		B1A3B69F2A7A988E00870525 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A3B69E2A7A988E00870525 /* ContentView.swift */; };
 		B1A3B6A12A7A989300870525 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B1A3B6A02A7A989300870525 /* Assets.xcassets */; };
@@ -14,6 +21,11 @@
 		B1A3B6AE2A7A989300870525 /* MockShoppingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A3B6AD2A7A989300870525 /* MockShoppingTests.swift */; };
 		B1A3B6B82A7A989300870525 /* MockShoppingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A3B6B72A7A989300870525 /* MockShoppingUITests.swift */; };
 		B1A3B6BA2A7A989300870525 /* MockShoppingUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A3B6B92A7A989300870525 /* MockShoppingUITestsLaunchTests.swift */; };
+		B1A3B6D02A7A992F00870525 /* api.json in Resources */ = {isa = PBXBuildFile; fileRef = B1A3B6CE2A7A992E00870525 /* api.json */; };
+		B1A3B6D12A7A992F00870525 /* products.json in Resources */ = {isa = PBXBuildFile; fileRef = B1A3B6CF2A7A992E00870525 /* products.json */; };
+		B1A3B6D42A7A9A4800870525 /* ProductModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A3B6D32A7A9A4800870525 /* ProductModel.swift */; };
+		B1A3B6D62A7A9BC500870525 /* ApiDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A3B6D52A7A9BC500870525 /* ApiDataModel.swift */; };
+		B1A3B6DA2A7A9E7A00870525 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = B1A3B6D92A7A9E7A00870525 /* Lottie */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +46,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B1A097BE2A7BAE5A00EE1068 /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
+		B1A097C02A7BAE6800EE1068 /* FetchState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchState.swift; sourceTree = "<group>"; };
+		B1A097C22A7BAE7A00EE1068 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		B1A097C42A7BAEBA00EE1068 /* APIConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConstants.swift; sourceTree = "<group>"; };
+		B1A097C72A7BB53C00EE1068 /* ProductServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductServiceProtocol.swift; sourceTree = "<group>"; };
+		B1A097C92A7BBF3D00EE1068 /* URLSessions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessions.swift; sourceTree = "<group>"; };
+		B1A097CB2A7BC20900EE1068 /* ProductsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsViewModel.swift; sourceTree = "<group>"; };
 		B1A3B6992A7A988E00870525 /* MockShopping.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MockShopping.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1A3B69C2A7A988E00870525 /* MockShoppingApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockShoppingApp.swift; sourceTree = "<group>"; };
 		B1A3B69E2A7A988E00870525 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -44,6 +63,11 @@
 		B1A3B6B32A7A989300870525 /* MockShoppingUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MockShoppingUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1A3B6B72A7A989300870525 /* MockShoppingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockShoppingUITests.swift; sourceTree = "<group>"; };
 		B1A3B6B92A7A989300870525 /* MockShoppingUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockShoppingUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		B1A3B6CE2A7A992E00870525 /* api.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = api.json; sourceTree = "<group>"; };
+		B1A3B6CF2A7A992E00870525 /* products.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = products.json; sourceTree = "<group>"; };
+		B1A3B6D22A7A999B00870525 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		B1A3B6D32A7A9A4800870525 /* ProductModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductModel.swift; sourceTree = "<group>"; };
+		B1A3B6D52A7A9BC500870525 /* ApiDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiDataModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +75,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B1A3B6DA2A7A9E7A00870525 /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -71,6 +96,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B1A097C62A7BB51B00EE1068 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				B1A097C72A7BB53C00EE1068 /* ProductServiceProtocol.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
 		B1A3B6902A7A988E00870525 = {
 			isa = PBXGroup;
 			children = (
@@ -94,8 +127,18 @@
 		B1A3B69B2A7A988E00870525 /* MockShopping */ = {
 			isa = PBXGroup;
 			children = (
+				B1A3B6D22A7A999B00870525 /* Info.plist */,
 				B1A3B69C2A7A988E00870525 /* MockShoppingApp.swift */,
-				B1A3B69E2A7A988E00870525 /* ContentView.swift */,
+				B1A3B6CC2A7A98EB00870525 /* Bundle */,
+				B1A097C62A7BB51B00EE1068 /* Protocol */,
+				B1A3B6C92A7A98BE00870525 /* Networking */,
+				B1A3B6C82A7A98B400870525 /* Models */,
+				B1A3B6C72A7A98AA00870525 /* ViewModel */,
+				B1A3B6C62A7A98A100870525 /* Presentation */,
+				B1A3B6CD2A7A990100870525 /* HelperView */,
+				B1A3B6CB2A7A98E000870525 /* Extensions */,
+				B1A3B6CA2A7A98D400870525 /* Utilits */,
+				B1A3B6D72A7A9E0500870525 /* LottieFiles */,
 				B1A3B6A02A7A989300870525 /* Assets.xcassets */,
 				B1A3B6A22A7A989300870525 /* Preview Content */,
 			);
@@ -127,6 +170,81 @@
 			path = MockShoppingUITests;
 			sourceTree = "<group>";
 		};
+		B1A3B6C62A7A98A100870525 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				B1A3B69E2A7A988E00870525 /* ContentView.swift */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		B1A3B6C72A7A98AA00870525 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				B1A097CB2A7BC20900EE1068 /* ProductsViewModel.swift */,
+			);
+			name = ViewModel;
+			path = "New Group";
+			sourceTree = "<group>";
+		};
+		B1A3B6C82A7A98B400870525 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B1A3B6D32A7A9A4800870525 /* ProductModel.swift */,
+				B1A3B6D52A7A9BC500870525 /* ApiDataModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		B1A3B6C92A7A98BE00870525 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				B1A097BE2A7BAE5A00EE1068 /* APIError.swift */,
+				B1A097C02A7BAE6800EE1068 /* FetchState.swift */,
+				B1A097C22A7BAE7A00EE1068 /* APIService.swift */,
+				B1A097C42A7BAEBA00EE1068 /* APIConstants.swift */,
+				B1A097C92A7BBF3D00EE1068 /* URLSessions.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		B1A3B6CA2A7A98D400870525 /* Utilits */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utilits;
+			sourceTree = "<group>";
+		};
+		B1A3B6CB2A7A98E000870525 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		B1A3B6CC2A7A98EB00870525 /* Bundle */ = {
+			isa = PBXGroup;
+			children = (
+				B1A3B6CE2A7A992E00870525 /* api.json */,
+				B1A3B6CF2A7A992E00870525 /* products.json */,
+			);
+			path = Bundle;
+			sourceTree = "<group>";
+		};
+		B1A3B6CD2A7A990100870525 /* HelperView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = HelperView;
+			sourceTree = "<group>";
+		};
+		B1A3B6D72A7A9E0500870525 /* LottieFiles */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = LottieFiles;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -143,6 +261,9 @@
 			dependencies = (
 			);
 			name = MockShopping;
+			packageProductDependencies = (
+				B1A3B6D92A7A9E7A00870525 /* Lottie */,
+			);
 			productName = MockShopping;
 			productReference = B1A3B6992A7A988E00870525 /* MockShopping.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +336,9 @@
 				Base,
 			);
 			mainGroup = B1A3B6902A7A988E00870525;
+			packageReferences = (
+				B1A3B6D82A7A9E7A00870525 /* XCRemoteSwiftPackageReference "lottie-spm" */,
+			);
 			productRefGroup = B1A3B69A2A7A988E00870525 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -232,7 +356,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				B1A3B6A42A7A989300870525 /* Preview Assets.xcassets in Resources */,
+				B1A3B6D12A7A992F00870525 /* products.json in Resources */,
 				B1A3B6A12A7A989300870525 /* Assets.xcassets in Resources */,
+				B1A3B6D02A7A992F00870525 /* api.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,6 +384,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				B1A3B69F2A7A988E00870525 /* ContentView.swift in Sources */,
+				B1A097CC2A7BC20900EE1068 /* ProductsViewModel.swift in Sources */,
+				B1A097C32A7BAE7A00EE1068 /* APIService.swift in Sources */,
+				B1A097CA2A7BBF3D00EE1068 /* URLSessions.swift in Sources */,
+				B1A3B6D42A7A9A4800870525 /* ProductModel.swift in Sources */,
+				B1A097C12A7BAE6800EE1068 /* FetchState.swift in Sources */,
+				B1A097C52A7BAEBA00EE1068 /* APIConstants.swift in Sources */,
+				B1A3B6D62A7A9BC500870525 /* ApiDataModel.swift in Sources */,
+				B1A097C82A7BB53C00EE1068 /* ProductServiceProtocol.swift in Sources */,
+				B1A097BF2A7BAE5A00EE1068 /* APIError.swift in Sources */,
 				B1A3B69D2A7A988E00870525 /* MockShoppingApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -419,7 +554,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"MockShopping/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_FILE = MockShopping/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -447,7 +582,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"MockShopping/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_FILE = MockShopping/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -577,6 +712,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		B1A3B6D82A7A9E7A00870525 /* XCRemoteSwiftPackageReference "lottie-spm" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-spm.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		B1A3B6D92A7A9E7A00870525 /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B1A3B6D82A7A9E7A00870525 /* XCRemoteSwiftPackageReference "lottie-spm" */;
+			productName = Lottie;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = B1A3B6912A7A988E00870525 /* Project object */;
 }

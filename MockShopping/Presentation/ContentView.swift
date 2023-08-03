@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @StateObject var moviesViewModel = ProductsViewModel()
     var body: some View {
         VStack {
             Image(systemName: "globe")
@@ -15,7 +17,9 @@ struct ContentView: View {
                 .foregroundColor(.accentColor)
             Text("Hello, world!")
         }
-        .padding()
+        .padding().onAppear{
+            moviesViewModel.loadData()
+        }
     }
 }
 
