@@ -21,12 +21,12 @@ class APIService: APIServiceProtocol {
     
     
     private func fetchProductsData() -> URL? {
-        var components = URLComponents(string: APIConstants.productURL)
+        let components = URLComponents(string: APIConstants.productURL)
         return components?.url
     }
     
     private func fetchUsersData() -> URL? {
-        var components = URLComponents(string: APIConstants.userURL)
+        let components = URLComponents(string: APIConstants.userURL)
         return components?.url
     }
 }
