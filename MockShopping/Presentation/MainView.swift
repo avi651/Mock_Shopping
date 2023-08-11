@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct MainView: View {
-    @StateObject var moviesViewModel = ProductsViewModel()
+    @StateObject var productViewModel = ProductsViewModel()
     
     @Environment(\.colorScheme) var colorScheme
     
@@ -18,7 +18,7 @@ struct MainView: View {
     var body: some View {
         ZStack {
             TabView(selection: $selectedSideMenuTab) {
-                HomeView(presentSideMenu: $presentSideMenu)
+                HomeView(productViewModel: productViewModel, presentSideMenu: $presentSideMenu)
                     .tag(0)
                 CartView(presentSideMenu: $presentSideMenu)
                     .tag(1)

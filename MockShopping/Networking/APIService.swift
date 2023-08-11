@@ -9,8 +9,8 @@ import Foundation
 
 class APIService: APIServiceProtocol {
     
-    func fetchProducts(completion: @escaping (Result<[ProductModel], APIError>) -> Void) {
-        let url = fetchProductsData()
+    func fetchProducts(type: String,completion: @escaping (Result<[ProductModel], APIError>) -> Void) {
+        let url = fetchProductsData(type: type)
         URLSessionsServices.fetch(type: [ProductModel].self, url: url, httpMethod: "GET", completion: completion)
     }
 
@@ -20,8 +20,8 @@ class APIService: APIServiceProtocol {
     }
     
     
-    private func fetchProductsData() -> URL? {
-        let components = URLComponents(string: APIConstants.productURL)
+    private func fetchProductsData(type: String) -> URL? {
+        let components = URLComponents(string: "\(APIConstants.productURL)\(type.description)")
         return components?.url
     }
     

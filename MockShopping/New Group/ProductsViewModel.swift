@@ -11,6 +11,7 @@ import Network
 class ProductsViewModel: ObservableObject {
     
     private var networkConnectivity = NWPathMonitor()
+    @Published var productType: String = ""
     @Published var products: [ProductModel]?
     @Published var state: FetchState = .good
     
@@ -22,11 +23,23 @@ class ProductsViewModel: ObservableObject {
         networkConnectivity.start(queue: DispatchQueue.global(qos: .userInitiated))
     }
     
-    internal func loadData() {
-        fetchProducts()
+    internal func loadMore() {
+        let productDescription = NSString(string: productType.description).removingPercentEncoding!
+        fetchProducts(with: productDescription)
     }
     
-    private func fetchProducts() {
+    /// For Carousal 
+    var featuredProduct : [ProductModel] {
+        var fProducts: [ProductModel] = []
+        if let products = self.products  {
+            if products.count >= 4 {
+            fProducts = products[0...3].shuffled()
+            }
+        }
+        return fProducts
+    }
+
+    private func fetchProducts(with type: String) {
         switch networkConnectivity.currentPath.status {
               case .satisfied: // connected to internet
                  guard state == FetchState.good else {
@@ -35,7 +48,7 @@ class ProductsViewModel: ObservableObject {
                  
                  state = .isLoading
                  
-            service.fetchProducts() { [weak self]  result in
+            service.fetchProducts(type: type) { [weak self]  result in
                      DispatchQueue.main.async {
                          switch result {
                             case .success(let results):

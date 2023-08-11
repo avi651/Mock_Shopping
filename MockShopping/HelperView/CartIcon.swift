@@ -1,22 +1,22 @@
 //
-//  ProfileIcon.swift
+//  CartIcon.swift
 //  MockShopping
 //
-//  Created by Avinash Kumar on 10/08/23.
+//  Created by Avinash Kumar on 11/08/23.
 //
 
 import SwiftUI
 
-struct ProfileIcon: View {
+struct CartIcon: View {
     var body: some View {
-        Image(systemName:"person")
+        Image(systemName:"cart")
             .foregroundColor(CustomColor.DarkText)
             .imageScale(.large)
     }
 }
 
-struct ProfileIcon_Previews: PreviewProvider {
+struct CartIcon_Previews: PreviewProvider {
     static var previews: some View {
-        ProfileIcon()
+        CartIcon()
     }
 }

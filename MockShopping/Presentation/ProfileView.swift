@@ -17,22 +17,20 @@ struct ProfileView: View {
                 Text("Hello Wo")
             }.navigationBarTitleDisplayMode(.large)
                 .navigationBarItems(
-                    leading:HStack{
+                    leading:
                         Button(action: {
                             presentSideMenu.toggle()
                         }, label: {
-                            ZStack{
-                                Circle()
-                                    .fill(CustomColor.AssentColor)
-                                    .frame(width: 40, height: 40)
-                                    .overlay(Image(systemName: "cart")
-                                        .foregroundColor(CustomColor.SecondaryBackground)
-                                        .imageScale(.large))  .overlay(Circle().stroke(lineWidth: 2).foregroundColor(CustomColor.SecondaryBackground))
-                            }
+                            NavigationSlideIcon()
+                        }),
+                    trailing: HStack{
+                        Button(action: {
+                            presentSideMenu.toggle()
+                        }, label: {
+                            ProfileIcon()
                         })
-                        ProfileIcon()
-                    },
-                    trailing:ProfileIcon()
+                        CartIcon()
+                    }
                 )
         }
     }

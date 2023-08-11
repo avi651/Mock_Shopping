@@ -8,6 +8,6 @@
 import Foundation
 
 protocol APIServiceProtocol{
-    func fetchProducts(completion: @escaping(Result<[ProductModel], APIError>) -> Void)
+    func fetchProducts(type: String,completion: @escaping (Result<[ProductModel], APIError>) -> Void)
     func fetchUser(completion: @escaping(Result<UserAPIResults, APIError>) -> Void)
 }
