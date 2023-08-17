@@ -11,14 +11,14 @@ struct MainView: View {
     @StateObject var productViewModel = ProductsViewModel()
     
     @Environment(\.colorScheme) var colorScheme
-    
+    @StateObject var cartItems = CartViewModel()
     @State var presentSideMenu = false
     @State var selectedSideMenuTab = 0
     
     var body: some View {
         ZStack {
             TabView(selection: $selectedSideMenuTab) {
-                HomeView(productViewModel: productViewModel, presentSideMenu: $presentSideMenu)
+                HomeView(productViewModel: productViewModel, presentSideMenu: $presentSideMenu).environmentObject(cartItems)
                     .tag(0)
                 CartView(presentSideMenu: $presentSideMenu)
                     .tag(1)

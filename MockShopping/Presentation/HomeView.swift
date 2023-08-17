@@ -12,6 +12,7 @@ struct HomeView: View {
     @ObservedObject var productViewModel: ProductsViewModel
     @Binding var presentSideMenu: Bool
     @State var pickedCategory: ProductListEndpoint = .all
+    @EnvironmentObject var cart: CartViewModel
     
     var body: some View {
         NavigationView{
@@ -35,9 +36,20 @@ struct HomeView: View {
                             }
                         })
                         if productViewModel.products != nil {
-                            ProductCarousel(products: productViewModel.featuredProduct)
+                        
+                            ProductCarousel(products: productViewModel.featuredProduct).frame(maxWidth: .infinity).environmentObject(cart)
                         } else {
-                            
+                            ProgressView()
+                                .progressViewStyle(.circular)
+                                .frame(maxWidth: .infinity)
+                        }
+                        
+                        if productViewModel.products != nil {
+                            ProductCollectionView(products: productViewModel.products!) .environmentObject(cart)
+                        } else {
+                            ProgressView()
+                                .progressViewStyle(.circular)
+                                .frame(maxWidth: .infinity)
                         }
                     }
                 }.onAppear{
@@ -56,7 +68,7 @@ struct HomeView: View {
                         Button(action: {
                             presentSideMenu.toggle()
                         }, label: {
-                            ProfileIcon()
+                            ProfileIcon().environmentObject(cart)
                         })
                         CartIcon()
                     }
@@ -67,6 +79,6 @@ struct HomeView: View {
 
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
-        HomeView(productViewModel: ProductsViewModel(), presentSideMenu: .constant(true))
+        HomeView(productViewModel: ProductsViewModel(), presentSideMenu: .constant(true)).environmentObject(CartViewModel())
     }
 }

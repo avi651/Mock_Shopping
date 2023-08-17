@@ -7,6 +7,7 @@
 
 import Foundation
 import Network
+import SwiftUI
 
 struct APIConstants {
     public static var productURL = "https://fakestoreapi.com/products"
@@ -29,4 +30,8 @@ enum ProductListEndpoint: String, CaseIterable {
         case .women: return "/category/women's%20clothing"
         }
     }
+}
+
+struct ScreenConstants{
+    public static var screenSize = UIScreen.main.bounds
 }

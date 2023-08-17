@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct ProductModel: Codable, Identifiable {
+struct ProductModel: Codable, Identifiable, Hashable {
     
         var id: Int
         var title: String
@@ -16,6 +16,14 @@ struct ProductModel: Codable, Identifiable {
         var category: String
         var image: String
         var rating: Rating
+    
+       static func == (lhs: Self, rhs: Self) -> Bool {
+           return lhs.id == rhs.id
+       }
+       
+       func hash(into hasher: inout Hasher) {
+           hasher.combine(id)
+       }
     
     enum CodingKeys: String, CodingKey {
         case id
@@ -37,6 +45,24 @@ struct Rating : Codable, Equatable{
         case count
     }
 }
+
+extension ProductModel {
+    var imageURL: URL {
+        URL(string: image)!
+    }
+    var formatedRating: String {
+        var result = ""
+        for _ in 0...Int(rating.rate){
+            result.append("★")
+        }
+        while result.count<5{
+            result += "☆"
+        }
+        return result
+    }
+    
+}
+
 
 //extension ProductModel {
 //    var imageURL: URL {

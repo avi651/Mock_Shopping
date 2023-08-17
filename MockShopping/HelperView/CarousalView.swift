@@ -72,22 +72,37 @@ struct ProductCarousel: View {
                         }
                     }){
                         
-                        
-                        AsyncImage(
-                            url: URL(string: products[index].image),
-                            content: { image in
-                                image.resizable()
-                                    .aspectRatio(contentMode: .fit)
-                            },
-                            placeholder: {
-                                ProgressView()
-                            }
-                        )
-                
-            
-//                        ProductCarouselCard(product: products[index])
-//                            .frame(width: (screenSize.width - 24))
-//                            .shadow(color: .darkText.opacity(0.1), radius: 3, x: 1, y: 2)
+                        HStack(alignment: .center){
+                            Rectangle()
+                                .fill(Color.white)
+                                .frame(width: 100, height: 140, alignment: .center)
+                                .cornerRadius(12)
+                                .overlay(
+                                    AsyncImage(
+                                        url: URL(string: products[index].image),
+                                        content: { image in
+                                            image.resizable()
+                                                .compositingGroup()
+                                                .clipped(antialiased: true)
+                                                .aspectRatio(contentMode: .fill)
+                                                .clipped()
+                                                .cornerRadius(12)
+                                                .padding()
+                                        },
+                                        placeholder: {
+                                            ProgressView()
+                                        }
+                                    )
+                                )
+                            VStack(alignment: .leading){
+                                Text(products[index].title)
+                                    .font(.subheadline)
+                                    .lineLimit(3)
+                                Text("\(products[index].price.format(f: ".2"))$")
+                                    .bold()
+                                    .padding(4)
+                            }.foregroundColor(CustomColor.DarkText)
+                        }.frame(width: screenSize.width - 16).shadow(color: CustomColor.DarkText.opacity(0.1), radius: 3, x: 1, y: 2)
                     }
                     .tag(index)
                 }
